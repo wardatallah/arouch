@@ -4,7 +4,7 @@ const SUPPORTED_LANGS = ['en', 'fr', 'ar'];
 
 async function loadLanguage(lang) {
   if (translations[lang]) return translations[lang];
-  const res = await fetch(`languages/${lang}.json`);
+  const res = await fetch(`assets/languages/${lang}.json`);
   translations[lang] = await res.json();
   return translations[lang];
 }

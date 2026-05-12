@@ -322,6 +322,7 @@ ul { list-style: none; }
   position: relative;
   z-index: 1;
   max-width: 1200px;
+  width: 100%;
 }
 
 .hero-badge {

@@ -94,7 +94,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const savedLang = localStorage.getItem('ga_lang') || 'fr';
-  setLanguage(savedLang);
+  setLanguage(savedLang).then(() => {
+    document.body.classList.remove('loading');
+    document.body.classList.add('ready');
+  });
 
   // Scroll-reveal animation
   const fadeElements = document.querySelectorAll(
